@@ -1,0 +1,134 @@
+DAY_DATE,DAY_INT,HOLIDAY_NAME,WEEKDAY,HOLIDAY_DATE_SRC,IS_HOL,IS_FRB_BANK_OBS_HOL,IS_NYSE_OBS_HOL,IS_US_FEDERAL_OBS_HOL
+1/1/2010,20100101,New Year's Day,Friday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/18/2010,20100118,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/15/2010,20100215,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/2/2010,20100402,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/31/2010,20100531,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2010,20100704,Independence Day,Sunday,https://www.timeanddate.com/holidays/us/independence-day,1,0,0,0
+7/5/2010,20100705,Independence Day (observed),Monday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/6/2010,20100906,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/11/2010,20101011,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2010,20101111,Veterans Day,Thursday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/25/2010,20101125,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/24/2010,20101224,Christmas Day (observed),Friday,https://www.timeanddate.com/holidays/us/christmas-day,1,0,1,1
+12/25/2010,20101225,Christmas Day,Saturday,https://www.timeanddate.com/holidays/us/christmas-day,1,0,0,0
+12/31/2010,20101231,New Year's Day (observed),Friday,https://www.timeanddate.com/holidays/us/new-year-day,1,0,0,1
+1/1/2011,20110101,New Year's Day,Saturday,https://www.timeanddate.com/holidays/us/new-year-day,1,0,0,0
+1/17/2011,20110117,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/21/2011,20110221,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/22/2011,20110422,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/30/2011,20110530,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2011,20110704,Independence Day,Monday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/5/2011,20110905,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/10/2011,20111010,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2011,20111111,Veterans Day,Friday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/24/2011,20111124,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2011,20111225,Christmas Day,Sunday,https://www.timeanddate.com/holidays/us/christmas-day,1,0,0,0
+12/26/2011,20111226,Christmas Day (observed),Monday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2012,20120101,New Year's Day,Sunday,https://www.timeanddate.com/holidays/us/new-year-day,1,0,0,0
+1/2/2012,20120102,New Year's Day (observed),Monday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/16/2012,20120116,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/20/2012,20120220,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/6/2012,20120406,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/28/2012,20120528,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2012,20120704,Independence Day,Wednesday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/3/2012,20120903,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/8/2012,20121008,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2012,20121111,Veterans Day,Sunday,https://www.timeanddate.com/holidays/us/veterans-day,1,0,0,0
+11/12/2012,20121112,Veterans Day (observed),Monday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/22/2012,20121122,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2012,20121225,Christmas Day,Tuesday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2013,20130101,New Year's Day,Tuesday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/21/2013,20130121,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/18/2013,20130218,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+3/29/2013,20130329,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/27/2013,20130527,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2013,20130704,Independence Day,Thursday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/2/2013,20130902,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/14/2013,20131014,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2013,20131111,Veterans Day,Monday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/28/2013,20131128,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2013,20131225,Christmas Day,Wednesday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2014,20140101,New Year's Day,Wednesday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/20/2014,20140120,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/17/2014,20140217,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/18/2014,20140418,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/26/2014,20140526,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2014,20140704,Independence Day,Friday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/1/2014,20140901,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/13/2014,20141013,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2014,20141111,Veterans Day,Tuesday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/27/2014,20141127,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2014,20141225,Christmas Day,Thursday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2015,20150101,New Year's Day,Thursday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/19/2015,20150119,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/16/2015,20150216,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/3/2015,20150403,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/25/2015,20150525,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/3/2015,20150703,Independence Day (observed),Friday,https://www.timeanddate.com/holidays/us/independence-day,1,0,1,1
+7/4/2015,20150704,Independence Day,Saturday,https://www.timeanddate.com/holidays/us/independence-day,1,0,0,0
+9/7/2015,20150907,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/12/2015,20151012,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2015,20151111,Veterans Day,Wednesday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/26/2015,20151126,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2015,20151225,Christmas Day,Friday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2016,20160101,New Year's Day,Friday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/18/2016,20160118,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/15/2016,20160215,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+3/25/2016,20160325,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/30/2016,20160530,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2016,20160704,Independence Day,Monday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/5/2016,20160905,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/10/2016,20161010,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2016,20161111,Veterans Day,Friday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/24/2016,20161124,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2016,20161225,Christmas Day,Sunday,https://www.timeanddate.com/holidays/us/christmas-day,1,0,0,0
+12/26/2016,20161226,Christmas Day (observed),Monday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2017,20170101,New Year's Day,Sunday,https://www.timeanddate.com/holidays/us/new-year-day,1,0,0,0
+1/2/2017,20170102,New Year's Day (observed),Monday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/16/2017,20170116,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/20/2017,20170220,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/14/2017,20170414,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/29/2017,20170529,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2017,20170704,Independence Day,Tuesday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/4/2017,20170904,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/9/2017,20171009,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/10/2017,20171110,Veterans Day (observed),Friday,https://www.timeanddate.com/holidays/us/veterans-day,1,0,0,1
+11/11/2017,20171111,Veterans Day,Saturday,https://www.timeanddate.com/holidays/us/veterans-day,1,0,0,0
+11/23/2017,20171123,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2017,20171225,Christmas Day,Monday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2018,20180101,New Year's Day,Monday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/15/2018,20180115,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/19/2018,20180219,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+3/30/2018,20180330,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/28/2018,20180528,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2018,20180704,Independence Day,Wednesday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/3/2018,20180903,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/8/2018,20181008,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2018,20181111,Veterans Day,Sunday,https://www.timeanddate.com/holidays/us/veterans-day,1,0,0,0
+11/12/2018,20181112,Veterans Day (observed),Monday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/22/2018,20181122,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2018,20181225,Christmas Day,Tuesday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2019,20190101,New Year's Day,Tuesday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/21/2019,20190121,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/18/2019,20190218,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/19/2019,20190419,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/27/2019,20190527,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/4/2019,20190704,Independence Day,Thursday,https://www.timeanddate.com/holidays/us/independence-day,1,1,1,1
+9/2/2019,20190902,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/14/2019,20191014,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2019,20191111,Veterans Day,Monday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/28/2019,20191128,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2019,20191225,Christmas Day,Wednesday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1
+1/1/2020,20200101,New Year's Day,Wednesday,https://www.timeanddate.com/holidays/us/new-year-day,1,1,1,1
+1/20/2020,20200120,Martin Luther King Day,Monday,https://www.timeanddate.com/holidays/us/martin-luther-king-day,1,1,1,1
+2/17/2020,20200217,Presidents' Day,Monday,https://www.timeanddate.com/holidays/us/washington-birthday,1,1,1,1
+4/10/2020,20200410,Good Friday,Friday,https://www.timeanddate.com/holidays/us/good-friday,1,0,1,0
+5/25/2020,20200525,Memorial Day,Monday,https://www.timeanddate.com/holidays/us/memorial-day,1,1,1,1
+7/3/2020,20200703,Independence Day (observed),Friday,https://www.timeanddate.com/holidays/us/independence-day,1,0,1,1
+7/4/2020,20200704,Independence Day,Saturday,https://www.timeanddate.com/holidays/us/independence-day,1,0,0,0
+9/7/2020,20200907,Labor Day,Monday,https://www.timeanddate.com/holidays/us/labor-day,1,1,1,1
+10/12/2020,20201012,Columbus Day,Monday,https://www.timeanddate.com/holidays/us/columbus-day,1,1,0,1
+11/11/2020,20201111,Veterans Day,Wednesday,https://www.timeanddate.com/holidays/us/veterans-day,1,1,0,1
+11/26/2020,20201126,Thanksgiving Day,Thursday,https://www.timeanddate.com/holidays/us/thanksgiving-day,1,1,1,1
+12/25/2020,20201225,Christmas Day,Friday,https://www.timeanddate.com/holidays/us/christmas-day,1,1,1,1

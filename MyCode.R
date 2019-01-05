@@ -11,7 +11,10 @@ weather <- separate(weather, 1, c("Site","Date","Hour","Temperature","Dewpoint",
 
 weather <- select(weather, Date:Temperature, Weather:Precip)
 
-weather <- filter(weather, grepl('2014', Date))
+weather$Date <- as.Date(weather$Date, format = "%m/%d/%Y")
+
+weather <- subset(weather, Date >= "2014-04-01" & Date <= "2014-09-30" )
+
 
 View(weather)
 
