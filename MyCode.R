@@ -1,6 +1,7 @@
 library(tidyr)
 library(dplyr)
 library(ggplot2)
+library(lubridate)
 
 # Weather data tidying, this can be factored
 
@@ -17,6 +18,11 @@ weather$Date <- as.Date(weather$Date, format = "%m/%d/%Y")
 
 weather <- subset(weather, Date >= "2014-04-01" & Date <= "2014-09-30" )
 
+weather$Hour <- sprintf("%02d", as.numeric(weather$Hour))
+
+weather$Date <- ymd(weather$Date)
+
+
 
 #holiday data tidying
 
@@ -26,6 +32,7 @@ holidays <- select(holidays, 1:4)
 
 holidays$DAY_DATE <- as.Date(holidays$DAY_DATE, format ="%m/%d/%Y" )
 
+holidays$DAY_DATE <- ymd(holidays$DAY_DATE)
 
 #uber raw data tidY
 
@@ -84,11 +91,20 @@ uber$Hour <- format(strptime(uber$Time, "%H:%M:%S"), "%H")
 
 
 
-uber2 <- uber %>% 
-  group_by(Hour, Date ) %>% 
+uber <- uber %>% 
+  group_by(Date, Hour) %>% 
   summarise(Rides = n())
-  
 
-View(uber2)
+uber$Date <- ymd(uber$Date)
 
+# Compiling 
+
+uber_weather <- left_join(uber, weather)
+
+str(uber_weather)
+View(uber_weather)
+View(uber)
+View(weather)
+str(uber)
+str(weather)
 
