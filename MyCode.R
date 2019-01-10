@@ -2,7 +2,7 @@ library(tidyr)
 library(dplyr)
 library(ggplot2)
 
-# Weather data tidying
+# Weather data tidying, this can be factored
 
 weather<- read.delim2(file = "KNYC.txt")
 
@@ -80,7 +80,15 @@ uber <- april %>%
   bind_rows(august) %>% 
   bind_rows(september)
 
-uber <- uber %>% 
-  mutate(Hour = format(Time, "%H:00:00"))
+uber$Hour <- format(strptime(uber$Time, "%H:%M:%S"), "%H")
 
-View(uber)
+
+
+uber2 <- uber %>% 
+  group_by(Hour, Date ) %>% 
+  summarise(Rides = n())
+  
+
+View(uber2)
+
+
