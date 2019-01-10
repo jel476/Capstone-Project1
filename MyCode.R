@@ -80,4 +80,7 @@ uber <- april %>%
   bind_rows(august) %>% 
   bind_rows(september)
 
+uber <- uber %>% 
+  mutate(Hour = format(Time, "%H:00:00"))
+
 View(uber)
