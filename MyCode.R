@@ -28,11 +28,13 @@ weather$Date <- ymd(weather$Date)
 
 holidays <- read.csv("2010-2020 Holiday Dates.csv")
 
-holidays <- select(holidays, 1:4)
+holidays <- select(holidays, DAY_DATE, HOLIDAY_NAME)
 
 holidays$DAY_DATE <- as.Date(holidays$DAY_DATE, format ="%m/%d/%Y" )
 
 holidays$DAY_DATE <- ymd(holidays$DAY_DATE)
+
+View(holidays)
 
 #uber raw data tidY
 
@@ -101,10 +103,5 @@ uber$Date <- ymd(uber$Date)
 
 uber_weather <- left_join(uber, weather)
 
-str(uber_weather)
-View(uber_weather)
-View(uber)
-View(weather)
-str(uber)
-str(weather)
+uber_weather2 <- left_join()
 
