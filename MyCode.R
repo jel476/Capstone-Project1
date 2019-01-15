@@ -2,6 +2,7 @@ library(tidyr)
 library(dplyr)
 library(ggplot2)
 library(lubridate)
+library(timeDate)
 
 # Weather data tidying, this can be factored
 
@@ -34,7 +35,6 @@ holidays$DAY_DATE <- as.Date(holidays$DAY_DATE, format ="%m/%d/%Y" )
 
 holidays$DAY_DATE <- ymd(holidays$DAY_DATE)
 
-View(holidays)
 
 #uber raw data tidY
 
@@ -103,5 +103,22 @@ uber$Date <- ymd(uber$Date)
 
 uber_weather <- left_join(uber, weather)
 
-uber_weather2 <- left_join()
+uber_weather <- left_join(uber_weather, holidays, by = c("Date" = "DAY_DATE"))
 
+# Renaming columns
+
+uber_weather <- rename(uber_weather, Holiday_Name = HOLIDAY_NAME )
+
+uber_weather <- rename(uber_weather, Precipitation = Precip)
+
+# Creating Holiday binary column
+
+uber_weather$Holiday <- ifelse(is.na(uber_weather$Holiday_Name), "no", "yes")
+
+# Creating weekend column
+
+uber_weather$Weekend <- isWeekend(uber_weather$Date)
+
+ggplot(uber_weather, aes(x = Date, y = Rides)) +
+  geom_smooth() +
+  geom_jitter(shape = ".")
