@@ -17,12 +17,22 @@ weather <- select(weather, Date:Temperature, Weather:Precip)
 
 weather$Date <- as.Date(weather$Date, format = "%m/%d/%Y")
 
-weather <- subset(weather, Date >= "2014-04-01" & Date <= "2014-09-30" )
+weather1 <- subset(weather, Date >= "2014-04-01" & Date <= "2014-09-30")
 
-weather$Hour <- sprintf("%02d", as.numeric(weather$Hour))
+weather1$Hour <- sprintf("%02d", as.numeric(weather1$Hour))
 
-weather$Date <- ymd(weather$Date)
+weather1$Date <- ymd(weather1$Date)
 
+
+
+weather2 <- subset(weather, Date >= "2015-01-01" & Date <= "2015-06-30")
+
+weather2$Hour <- sprintf("%02d", as.numeric(weather2$Hour))
+
+weather2$Date <- ymd(weather2$Date)
+
+
+weather3 <- rbind(weather1, weather2)
 
 
 #holiday data tidying
@@ -34,6 +44,8 @@ holidays <- select(holidays, DAY_DATE, HOLIDAY_NAME)
 holidays$DAY_DATE <- as.Date(holidays$DAY_DATE, format ="%m/%d/%Y" )
 
 holidays$DAY_DATE <- ymd(holidays$DAY_DATE)
+
+
 
 
 #uber raw data tidY
@@ -82,15 +94,26 @@ september <- separate(september, Date.Time, c("Date", "Time"), sep = " ")
 
 
 
+early2015 <- read.csv("uber-raw-data-janjune.csv")
+
+early2015 <- separate(early2015, Pickup_date, c("Date", "Time"), sep = " ")
+
+early2015 <- early2015[order(early2015$Date, early2015$Time),]
+
+
+
+
 uber <- april %>% 
   bind_rows(may) %>% 
   bind_rows(june) %>% 
   bind_rows(july) %>% 
   bind_rows(august) %>% 
-  bind_rows(september)
+  bind_rows(september) %>% 
+  bind_rows(early2015)
+
+
 
 uber$Hour <- format(strptime(uber$Time, "%H:%M:%S"), "%H")
-
 
 
 uber <- uber %>% 
@@ -99,11 +122,16 @@ uber <- uber %>%
 
 uber$Date <- ymd(uber$Date)
 
+
 # Compiling 
 
-uber_weather <- left_join(uber, weather)
+uber_weather <- left_join(uber, weather3)
+
 
 uber_weather <- left_join(uber_weather, holidays, by = c("Date" = "DAY_DATE"))
+
+
+View(uber_weather)
 
 # Renaming columns
 
@@ -118,6 +146,10 @@ uber_weather$Holiday <- ifelse(is.na(uber_weather$Holiday_Name), "no", "yes")
 # Creating weekend column
 
 uber_weather$Weekend <- isWeekend(uber_weather$Date)
+
+
+
+
 
 ggplot(uber_weather, aes(x = Date, y = Rides)) +
   geom_smooth() +
