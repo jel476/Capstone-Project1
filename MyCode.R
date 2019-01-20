@@ -122,3 +122,4 @@ uber_weather$Weekend <- isWeekend(uber_weather$Date)
 ggplot(uber_weather, aes(x = Date, y = Rides)) +
   geom_smooth() +
   geom_jitter(shape = ".")
+
