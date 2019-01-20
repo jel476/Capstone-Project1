@@ -148,9 +148,7 @@ uber_weather$Holiday <- ifelse(is.na(uber_weather$Holiday_Name), "no", "yes")
 uber_weather$Weekend <- isWeekend(uber_weather$Date)
 
 
-
-
-
+#created data visualization
 ggplot(uber_weather, aes(x = Date, y = Rides)) +
   geom_smooth() +
   geom_jitter(shape = ".")
