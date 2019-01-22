@@ -153,3 +153,29 @@ ggplot(uber_weather, aes(x = Date, y = Rides)) +
   geom_smooth() +
   geom_jitter(shape = ".")
 
+
+
+#find out where combinations of precipitation should be changed to
+
+table(uber_weather$Weather)
+
+aggregate(uber_weather[,3], list(uber_weather$Weather), mean)
+
+# change the combinations to singular based on the results 
+
+uber_weather$Weather <- uber_weather$Weather %>% 
+  gsub(pattern = "-FZRA BR", replacement = "-FZRA") %>% 
+  gsub(pattern = "-RA BR", replacement = "-RA") %>% 
+  gsub(pattern = "-RA FG", replacement = "FG") %>% 
+  gsub(pattern = "-SN BR", replacement = "-SN") %>% 
+  gsub(pattern = "-SN FZFG", replacement = "-SN") %>% 
+  gsub(pattern = "+RA BR", replacement = "+RA") %>% 
+  gsub(pattern = "\\++RA", replacement = "+RA") %>% 
+  gsub(pattern = "\\+RA FG", replacement = "+RA") %>% 
+  gsub(pattern = "RA FG", replacement = "RA") %>% 
+  gsub(pattern = "SN FG", replacement = "FG") %>% 
+  gsub(pattern = "SN FZFG", replacement = "SN") %>% 
+  gsub(pattern = "UP BR", replacement = "UP")
+
+  
+  
