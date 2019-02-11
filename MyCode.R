@@ -182,16 +182,44 @@ uber_weather$Weather <- uber_weather$Weather %>%
 # Adding variables of different fromats of dates for visualization
 
 uber_weather<-uber_weather%>%
-  mutate(weekday=factor(weekdays(Date,T),levels = rev(c("Mon", "Tue", "Wed", "Thu","Fri", "Sat", "Sun"))))%>%
+  mutate(weekday=factor(weekdays(Date, T),levels = rev(c("Mon", "Tue", "Wed", "Thu","Fri", "Sat", "Sun"))))%>%
   mutate(year=format(Date,'%Y'))%>%
+  mutate(month=format(Date, '%b')) %>% 
   mutate(week=as.numeric(format(Date,"%W")))
+
+
+uber_weather$month = factor(uber_weather$month, levels = month.abb)
+
+uber_weather <- uber_weather %>% 
+  group_by(year, month) %>% 
+  mutate(monthly_average = mean(Rides))
+
 
 
 #Data Visualization
 
 uber_weather2014 <- subset(uber_weather, year == 2014)
 uber_weather2015 <- subset(uber_weather, year == 2015)
+
+## heat map
+
   
+ggplot(uber_weather, aes(x = week, y = weekday, fill = Rides)) +
+  viridis::scale_fill_viridis(name="Uber Rides",
+                              option = 'C',
+                              direction = 1,
+                              na.value = "grey93") +
+  geom_tile(color = 'white', size = 0.1) +
+  facet_wrap('year', ncol = 1) +
+  scale_x_continuous(
+    expand = c(0, 0),
+    breaks = seq(1, 52, length = 12),
+    labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")) +
+  theme_ipsum_rc(plot_title_family = 'Slabo 27px')
+
+
+
 
 ggplot(uber_weather2014, aes(x = week, y = weekday, fill = Rides)) +
   viridis::scale_fill_viridis(name="Uber Rides",
@@ -220,4 +248,37 @@ ggplot(uber_weather2015, aes(x = week, y = weekday, fill = Rides)) +
     labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")) +
   theme_ipsum_rc(plot_title_family = 'Slabo 27px')
+
+
+##Smooth
+
+ggplot(uber_weather, aes(Date, Rides)) +
+  geom_smooth() +
+  geom_jitter(shape=".")
+
+ggplot(uber_weather2014, aes(Date, Rides)) +
+  geom_smooth() +
+  geom_jitter(shape=".")
+
+ggplot(uber_weather2015, aes(Date, Rides)) +
+  geom_smooth() +
+  geom_jitter(shape=".")
+
+##Bar graph
+
+ggplot(uber_weather, aes(x = month, y = monthly_average)) +
+  geom_bar(stat = "identity") 
+  
+
+ggplot(uber_weather2014, aes(month, monthly_average)) +
+  geom_bar(stat = "identity") 
+
+  
+
+ggplot(uber_weather2015, aes(month, monthly_average)) +
+  geom_bar(stat = "identity") 
+
+##Boxplot
+
+##smooth 2
   
