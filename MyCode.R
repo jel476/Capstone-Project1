@@ -3,8 +3,11 @@ library(dplyr)
 library(ggplot2)
 library(lubridate)
 library(timeDate)
+library(hrbrthemes)
+library(formattable)
+library(viridis)
 
-# Weather data tidying, this can be factored
+# Weather data tidying
 
 weather<- read.delim2(file = "KNYC.txt")
 
@@ -131,7 +134,6 @@ uber_weather <- left_join(uber, weather3)
 uber_weather <- left_join(uber_weather, holidays, by = c("Date" = "DAY_DATE"))
 
 
-View(uber_weather)
 
 # Renaming columns
 
@@ -157,7 +159,6 @@ ggplot(uber_weather, aes(x = Date, y = Rides)) +
 
 #find out where combinations of precipitation should be changed to
 
-table(uber_weather$Weather)
 
 aggregate(uber_weather[,3], list(uber_weather$Weather), mean)
 
@@ -177,5 +178,46 @@ uber_weather$Weather <- uber_weather$Weather %>%
   gsub(pattern = "SN FZFG", replacement = "SN") %>% 
   gsub(pattern = "UP BR", replacement = "UP")
 
+
+# Adding variables of different fromats of dates for visualization
+
+uber_weather<-uber_weather%>%
+  mutate(weekday=factor(weekdays(Date,T),levels = rev(c("Mon", "Tue", "Wed", "Thu","Fri", "Sat", "Sun"))))%>%
+  mutate(year=format(Date,'%Y'))%>%
+  mutate(week=as.numeric(format(Date,"%W")))
+
+
+#Data Visualization
+
+uber_weather2014 <- subset(uber_weather, year == 2014)
+uber_weather2015 <- subset(uber_weather, year == 2015)
   
+
+ggplot(uber_weather2014, aes(x = week, y = weekday, fill = Rides)) +
+  viridis::scale_fill_viridis(name="Uber Rides",
+                              option = 'C',
+                              direction = 1,
+                              na.value = "grey93") +
+  geom_tile(color = 'white', size = 0.1) +
+  facet_wrap('year', ncol = 1) +
+  scale_x_continuous(
+    expand = c(0, 0),
+    breaks = seq(1, 52, length = 12),
+    labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")) +
+  theme_ipsum_rc(plot_title_family = 'Slabo 27px')
+
+ggplot(uber_weather2015, aes(x = week, y = weekday, fill = Rides)) +
+  viridis::scale_fill_viridis(name="Uber Rides",
+                              option = 'C',
+                              direction = 1,
+                              na.value = "grey93") +
+  geom_tile(color = 'white', size = 0.1) +
+  facet_wrap('year', ncol = 1) +
+  scale_x_continuous(
+    expand = c(0, 0),
+    breaks = seq(1, 52, length = 12),
+    labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")) +
+  theme_ipsum_rc(plot_title_family = 'Slabo 27px')
   
