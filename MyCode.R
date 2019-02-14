@@ -150,11 +150,6 @@ uber_weather$Holiday <- ifelse(is.na(uber_weather$Holiday_Name), "no", "yes")
 uber_weather$Weekend <- isWeekend(uber_weather$Date)
 
 
-#created data visualization
-ggplot(uber_weather, aes(x = Date, y = Rides)) +
-  geom_smooth() +
-  geom_jitter(shape = ".")
-
 
 
 #find out where combinations of precipitation should be changed to
@@ -195,6 +190,11 @@ uber_weather <- uber_weather %>%
   mutate(monthly_average = mean(Rides))
 
 
+uber_weather$Temperature <- as.numeric(as.character(uber_weather$Temperature))
+
+uber_weather$temp_ranges <- cut(uber_weather$Temperature, breaks=c(0,9,19,29,39,49,59,69,79,89,99), labels=c("0-9","10-19","20-29","30-39",
+                                                                                                           "40-49","50-59","60-69",
+                                                                                                           "70-79","80-89","90-99"))
 
 #Data Visualization
 
@@ -278,7 +278,61 @@ ggplot(uber_weather2014, aes(month, monthly_average)) +
 ggplot(uber_weather2015, aes(month, monthly_average)) +
   geom_bar(stat = "identity") 
 
+
+
+
 ##Boxplot
 
-##smooth 2
-  
+ggplot(uber_weather, aes(x = year, y = Rides)) +
+geom_boxplot()
+
+ggplot(uber_weather2014, aes(month, Rides)) +
+  geom_boxplot()
+
+ggplot(uber_weather2015, aes(month, Rides)) +
+  geom_boxplot()
+
+
+
+ggplot(uber_weather, aes(x = Weather, y = Rides)) +
+  geom_boxplot()
+
+ggplot(uber_weather2014, aes(Weather, Rides)) +
+  geom_boxplot()
+
+ggplot(uber_weather2015, aes(Weather, Rides)) +
+  geom_boxplot()
+
+
+
+ggplot(uber_weather, aes(x = temp_ranges, y = Rides)) +
+  geom_boxplot()
+
+ggplot(uber_weather2014, aes(temp_ranges, Rides)) +
+  geom_boxplot()
+
+ggplot(uber_weather2015, aes(temp_ranges, Rides)) +
+  geom_boxplot()
+
+## Linear Model
+ggplot(uber_weather, aes(Date, Rides)) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_jitter(shape=".")
+
+ggplot(uber_weather2014, aes(Date, Rides)) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_jitter(shape=".")
+
+ggplot(uber_weather2015, aes(Date, Rides)) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_jitter(shape=".")
+
+
+
+
+##
+
+
+
+ 
+
