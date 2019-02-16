@@ -328,11 +328,19 @@ ggplot(uber_weather2015, aes(Date, Rides)) +
   geom_jitter(shape=".")
 
 
+# Holiday patterns
 
+holidaydataset <- uber_weather %>% 
+  filter(Holiday == "yes") %>% 
+  group_by(Holiday_Name, year) %>% 
+  summarise(sum(Rides))
 
-##
+View(holidaydataset)
 
-
-
+uber_weather %>% 
+  filter(year == "2015") %>% 
+  group_by(weekday) %>% 
+  summarise(mean(Rides))
  
+
 
