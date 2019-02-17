@@ -332,8 +332,19 @@ ggplot(uber_weather2015, aes(Date, Rides)) +
 
 holidaydataset <- uber_weather %>% 
   filter(Holiday == "yes") %>% 
-  group_by(Holiday_Name, year) %>% 
-  summarise(sum(Rides))
+  group_by(Holiday_Name, year) 
+
+
+  
+  ggplot(holidaydataset ,aes(x = Holiday_Name, y = Rides, fill = year ))+
+  geom_bar(stat = "identity" , position = "dodge")
+
+
+  holidaydataset <- uber_weather %>% 
+    filter(Holiday == "yes") %>% 
+    group_by(Holiday_Name, year)  %>% 
+    summarise(sum(Rides)) 
+
 
 View(holidaydataset)
 
