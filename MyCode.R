@@ -376,4 +376,4 @@ uber_weather %>%
 model1 <- lm(logvalues ~ Temperature + Date + Hour + Precipitation + Weather + Holiday + Weekend, data = uber_weather)
 summary(model1)
 
-1
+2
