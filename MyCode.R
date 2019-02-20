@@ -195,6 +195,22 @@ uber_weather$Temperature <- as.numeric(as.character(uber_weather$Temperature))
 uber_weather$temp_ranges <- cut(uber_weather$Temperature, breaks=c(0,9,19,29,39,49,59,69,79,89,99), labels=c("0-9","10-19","20-29","30-39",
                                                                                                            "40-49","50-59","60-69",
                                                                                                            "70-79","80-89","90-99"))
+uber_weather$Precipitation <- as.numeric(as.character(uber_weather$Precipitation)) 
+
+
+
+#log column for normal data transformation
+
+uber_weather <- uber_weather %>% 
+  mutate(logvalues = log10(Rides))
+
+ggplot(uber_weather, aes(logvalues))+
+  geom_histogram()
+
+
+
+
+
 
 #Data Visualization
 
@@ -314,7 +330,7 @@ ggplot(uber_weather2014, aes(temp_ranges, Rides)) +
 ggplot(uber_weather2015, aes(temp_ranges, Rides)) +
   geom_boxplot()
 
-## Linear Model
+## Linear graph
 ggplot(uber_weather, aes(Date, Rides)) +
   geom_smooth(method = "lm", se = FALSE) +
   geom_jitter(shape=".")
@@ -328,7 +344,7 @@ ggplot(uber_weather2015, aes(Date, Rides)) +
   geom_jitter(shape=".")
 
 
-# Holiday patterns
+## Holiday patterns
 
 holidaydataset <- uber_weather %>% 
   filter(Holiday == "yes") %>% 
@@ -348,10 +364,16 @@ holidaydataset <- uber_weather %>%
 
 View(holidaydataset)
 
+
 uber_weather %>% 
   filter(year == "2015") %>% 
   group_by(weekday) %>% 
   summarise(mean(Rides))
  
+
+#Linear Regression model
+
+model1 <- lm(logvalues ~ Temperature + Date + Hour + Precipitation + Weather + Holiday + Weekend, data = uber_weather)
+summary(model1)
 
 
