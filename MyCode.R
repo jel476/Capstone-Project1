@@ -208,7 +208,12 @@ ggplot(uber_weather, aes(logvalues))+
   geom_histogram()
 
 
+# spliting up the data set to create a training and testing set
 
+uber_weather_test <- uber_weather[6542:8725,]
+
+
+uber_weather <- uber_weather[1:6541,]
 
 
 
@@ -376,4 +381,10 @@ uber_weather %>%
 model1 <- lm(logvalues ~ Temperature + Date + Hour + Precipitation + Weather + Holiday + Weekend, data = uber_weather)
 summary(model1)
 
-2
+# prediction
+
+PredictTest = predict(model1, newdata = uber_weather_test)
+SSE = sum((uber_weather_test$logvalues - PredictTest)^2)
+SST = sum((uber_weather_test$logvalues - mean(uber_weather$logvalues))^2)
+1 - SSE/SST
+
