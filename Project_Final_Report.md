@@ -56,6 +56,15 @@ summary(cars)
     ##  3rd Qu.:19.0   3rd Qu.: 56.00  
     ##  Max.   :25.0   Max.   :120.00
 
+Limitations of Data
+-------------------
+
+While we can obtain many insights from this data set, there are certain questions that cannot be answered by using it. For instance, while the results of this project can help us understand what factors can be attributed to an increase in private transportation usage, it cannot identify how how much of this traffic is being diverted from public transportation. This actual piece of insight is impossible to obtain with the data used in this project because there is no information about any type of public transportation ridership. Therefore, we cannot compare and make inferences on what portion of the private transportation ridership is being used as a direct substitute for public transportation.
+
+Something that our data set does not take into account is any other type of special event happening in NYC that is not a holiday. Could there have been a special concert many New Yorkers attended? A special fair or parade that caused many New Yorkers to leave theor homes.
+
+Additionally, since our data set will contain no information on public transportation services, there is no way to measure if cloures, delays, and other mishaps from the MTA are affecting Uber ridership.
+
 Including Plots
 ---------------
 
