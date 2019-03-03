@@ -14,7 +14,7 @@ By looking at Uber ridership data, we can learn about what may cause the people 
 Data Used
 ---------
 
-The final data set used in this project will be a combination of 3 different data sets. The first and major one, provided by Five Thirty Eight, is Uber ridersehip data set in two different time spans from April 1st – September 30th 2014 and January 1st – March 31st 2015, containing thousands of observations . In this data set we can find the specific time and date there was a pickup by Uber.
+The final data set used in this project will be a combination of 3 different data sets. The first and major one, provided by Five Thirty Eight, is Uber ridership data set in two different time spans from April 1st – September 30th 2014 and January 1st – March 31st 2015, containing thousands of observations . In this data set we can find the specific time and date there was a pickup by Uber.
 
     ##          Date.Time     Lat      Lon   Base
     ## 1 4/1/2014 0:11:00 40.7690 -73.9549 B02512
@@ -49,7 +49,7 @@ Limitations of Data
 
 While we can obtain many insights from this data set, there are certain questions that cannot be answered by using it. For instance, while the results of this project can help us understand what factors can be attributed to an increase in private transportation usage, it cannot identify how how much of this traffic is being diverted from public transportation. This actual piece of insight is impossible to obtain with the data used in this project because there is no information about any type of public transportation ridership. Therefore, we cannot compare and make inferences on what portion of the private transportation ridership is being used as a direct substitute for public transportation.
 
-Something that our data set does not take into account is any other type of special event happening in NYC that is not a holiday. Could there have been a special concert many New Yorkers attended? A special fair or parade that caused many New Yorkers to leave theor homes.
+Something that our data set does not take into account is any other type of special event happening in NYC that is not a holiday. Could there have been a special concert many New Yorkers attended? A special fair or parade that caused many New Yorkers to leave their homes.
 
 Additionally, since our data set will contain no information on public transportation services, there is no way to measure if cloures, delays, and other mishaps from the MTA are affecting Uber ridership.
 
@@ -64,12 +64,6 @@ Final Data Set
 --------------
 
 The data set used for this project contains different variables that we can use to understand how Uber ridership changes based on its relationship with them. The dependent variable of the data set is “Rides” which is the total amount of rides per hour of a given date. The independent variables in this data set include time (Date and hour of the day), climate (hourly temperature), weather (condition and amount of precipitation), and holidays (federal).
-
-    ## Joining, by = c("Date", "Hour")
-
-    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-
-![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
     ## # A tibble: 6 x 16
     ## # Groups:   year, month [1]
@@ -87,23 +81,7 @@ The data set used for this project contains different variables that we can use 
 
 For the data visualizations, I found it necessary to make different plots for 2014 and 2015. There seemed to be a very significant increase in ridership as time went on. If I had all of my data visualizations and statistical analysis performed with 1 data set, then it would distort my results as clearly the 2015 months had around 2-3 more times the amount of rides as 2014. Therefore a 'year' column was created so that I could have 2 distinct groups of graphs.Additionally, there is a column for the amount of rides in a given observation but transformed with log10 in order to normalize the data.
 
-``` r
-ggplot(uber_weather, aes(Rides))+
-  geom_histogram()
-```
-
-    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-
-![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-5-1.png)
-
-``` r
-ggplot(uber_weather, aes(logvalues))+
-  geom_histogram()
-```
-
-    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-
-![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-5-2.png)
+![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-5-1.png)![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-5-2.png)
 
 Data Relationships
 ------------------
@@ -123,81 +101,7 @@ Based on statistical analyses and data visualizations created in this project, I
 
 By looking at the heat map below, it is also clearly apparent that the most popular days for Uber rides were on Thursdays – Saturdays.
 
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
-    ## x$y, : font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
-    ## x$y, : font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-7-1.png)
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
-    ## x$y, : font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x,
-    ## x$y, : font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-    ## font family not found in Windows font database
-
-![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-7-2.png)
+![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-7-1.png)![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-7-2.png)
 
 Additionally, when the weather conditions were better, in other words when sky was clear or when there were few clouds in the sky, ridership was lower. And when conditions were harsher, there was an increase in ridership.
 
@@ -208,8 +112,6 @@ The temperature also behaved similarly, but in the opposite way. When it was col
 ![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-9-1.png)![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-9-2.png)
 
 And finally, as previously stated, there was an increase in ridership as time went on, which shows growth of Uber's services and business over time.
-
-    ## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
 
 ![](Project_Final_Report_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
@@ -250,6 +152,6 @@ Recommendations
 
 Based on the results of this project I would recommend to Uber to further increase the availability of their services during holidays since the ridership in these days is dramatically higher than other days.
 
-Addtionally, Uber should in general be increasing the amount of service they provide as we can see that their popularity as a means of transportation is increasing as time goes on in NYC.
+Additionally, Uber should in general be increasing the amount of service they provide as we can see that their popularity as a means of transportation is increasing as time goes on in NYC.
 
 Finally, using the linear regression model, we can conclude that Uber should further increase their service or amount of drivers at 6pm and on clear weather days.
