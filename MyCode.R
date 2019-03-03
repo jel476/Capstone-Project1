@@ -6,6 +6,8 @@ library(timeDate)
 library(hrbrthemes)
 library(formattable)
 library(viridis)
+library(hydroGOF)
+
 
 # Weather data tidying
 
@@ -384,7 +386,16 @@ summary(model1)
 # prediction
 
 PredictTest = predict(model1, newdata = uber_weather_test)
+
+#R - Squared Value of testinf set
+
 SSE = sum((uber_weather_test$logvalues - PredictTest)^2)
 SST = sum((uber_weather_test$logvalues - mean(uber_weather$logvalues))^2)
 1 - SSE/SST
+
+# Root Mean Square Error
+
+rmse(PredictTest, uber_weather_test$logvalues)
+
+
 
